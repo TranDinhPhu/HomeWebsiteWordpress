@@ -1,0 +1,74 @@
+/*
+Theme Name: Custom Phu One
+Author: Tran Dinh Phu
+Description: Phu One theme
+Version: 1.0
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	background-color: black;
+}
+
+a {
+	
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	margin-left : 4rem;
+	text-decoration: none;
+}
+
+footer {
+	background-color: black;
+	position: absolute;
+	bottom :0;
+	width: 100%;
+	color :lightgray;
+}
+
+footer a {
+	color :gray;
+}
+
+footer a:hover {
+	color : lightgray;
+}
+
+#page {
+	min-height: 100vh;
+	position: relative;
+	padding-bottom: 15rem;
+}
+
+.current-menu-item {
+	background-color: lightgray;
+}
+
+.current-menu-item a {
+	color: darkblue !important;
+}
+
+.title-blue {
+	color: white;
+	background-color: blue;
+	font-size:larger;
+	padding: 0.1rem;
+}
+
+.highlight-green {
+	color: green;
+	font-size:larger;
+}
