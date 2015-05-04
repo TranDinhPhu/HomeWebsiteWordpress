@@ -16,7 +16,7 @@
 
 			<div class="container">
 				<div class="row">
-				<nav role="navigation" class="col-xs-8">
+				<nav role="navigation" class="col-xs-8" id="footer-nav-region">
 					<?php wp_nav_menu( array( 'theme_location' => 'footer') ); ?>
 				</nav><!-- #site-navigation -->
 				</div>
