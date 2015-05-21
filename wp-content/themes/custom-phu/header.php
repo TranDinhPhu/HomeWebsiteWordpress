@@ -21,7 +21,19 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
-	<title><?php bloginfo(); ?><?php wp_title( '>', true, 'left' ); ?></title>
+	<title>
+		<?php
+		if (!is_front_page()) {
+			wp_title( ' - ', true, 'right' );
+			bloginfo();
+		}
+		else {
+			bloginfo();
+			echo ' - ';
+			bloginfo( 'description' );
+		}
+		?>
+	</title>
 	<?php wp_enqueue_script("jquery"); ?>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
@@ -36,11 +48,11 @@
 <body <?php body_class(); ?>>
 	<div id="page">
 		<header id="masthead" role="banner">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<!--<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 				<p><?php bloginfo( 'name' ); ?></p>
 			</a>
-			<p><?php bloginfo( 'description' ); ?></p>
-
+			<p><?php bloginfo( 'description' ); ?></p>-->
+			<div id="banner"></div>
 			<div id="navbar" class="container">
 				<nav id="site-navigation" class="navbar navbar-inverse" role="navigation">
 					<div class="navbar-header">
@@ -53,7 +65,7 @@
 					</div>
 					<div class="collapse navbar-collapse" id="top_navigation_bar">
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav navbar-nav' ) ); ?>
-						<?php get_search_form(); ?>
+						<?php //get_search_form(); ?>
 					</div>
 				</nav><!-- #site-navigation -->
 			</div><!-- #navbar -->
