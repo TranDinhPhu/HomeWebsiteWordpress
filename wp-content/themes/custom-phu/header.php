@@ -34,6 +34,7 @@
 		}
 		?>
 	</title>
+	<link rel="icon" href="<?php echo site_url('favicon.ico'); ?>">
 	<?php wp_enqueue_script("jquery"); ?>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
@@ -52,7 +53,10 @@
 				<p><?php bloginfo( 'name' ); ?></p>
 			</a>
 			<p><?php bloginfo( 'description' ); ?></p>-->
-			<div id="banner"></div>
+			<div id="banner" class="container">
+				<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/logo.png" />
+				<span class="h1"><?php bloginfo(); ?></span>
+			</div>
 			<div id="navbar" class="container">
 				<nav id="site-navigation" class="navbar navbar-inverse" role="navigation">
 					<div class="navbar-header">

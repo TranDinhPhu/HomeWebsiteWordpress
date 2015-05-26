@@ -30,15 +30,32 @@ li {
 	margin-left : 1rem;
 	text-decoration: none;
 }
+@media screen and (min-width:50rem) {
+	#masthead {
+		background: -webkit-linear-gradient(deepskyblue, dodgerblue); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(deepskyblue, dodgerblue); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(deepskyblue, dodgerblue); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(deepskyblue, dodgerblue); /* Standard syntax */
+	}
+	#banner {
+		height : 10rem;
+		color: black;
+		font-family : Impact, Charcoal, sans-serif;
+	}
+	#banner img {
+		height: 100%;
+		width: auto;
+		padding: 1rem;
+	}
+}
 
-#masthead {
-	background: -webkit-linear-gradient(darkblue, blue); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(darkblue, blue); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(darkblue, blue); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(darkblue, blue); /* Standard syntax */}
-
-#banner {
-	height : 10rem;
+@media screen and (width:50rem), screen and (max-width:50rem) {
+	#banner {
+		display :none;
+	}
+	#masthead {
+		background: initial;
+	}
 }
 
 footer {
@@ -76,11 +93,20 @@ footer a:hover {
 	color: darkblue !important;
 }
 
+#main li {
+	margin-left : 4rem;
+}
+
 .title-blue {
 	color: white;
 	background-color: blue;
 	font-size:larger;
-	padding: 0.1rem;
+	padding: 0.2rem 0 0.2rem 1rem;
+}
+
+.highlight-blue {
+	color: blue;
+	font-size:larger;
 }
 
 .highlight-green {

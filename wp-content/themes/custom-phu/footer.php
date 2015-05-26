@@ -20,7 +20,7 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'footer') ); ?>
 				</nav><!-- #site-navigation -->
 				</div>
-				<p>Powered by &copy;Phu <?php echo date('Y') ?></p>
+				<p>Powered by &copy;Phu 2015-<?php echo date('Y') ?></p>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div><!-- #page -->

@@ -23,7 +23,7 @@ get_header(); ?>
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php //get_template_part( 'content', get_post_format() ); ?>
-				<p><?php the_title(); ?></p>
+				<p><?php if(!is_page) the_title(); ?></p>
 				<p><?php the_content(); ?></p>
 			<?php endwhile; ?>
 
